@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<link href="styles.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<center>
+			<h1>Star  Wars Quiz Game!</h1>
+
+			
+			<table  id="cssTable" style="width:50%">
+			  <tr>
+				<th>Questions</th>
+				<th>Submitted Answer</th> 
+				<th>Correct Answer</th>
+			  </tr>
+				<% for(var i=0; i< questions.length; i++ ) { %>
+				  <tr>
+					<td><%= questions[i] %></td>
+					<td><%= answers[i] %></td> 
+					<td><%= correctanswers[i] %></td>
+				  </tr>
+				<% } %>
+			</table>
+			<form action='/highscores' method='get' >
+				<input id="sendAnswers" type="submit" value="View Highscores"/>
+			</form>
+		</center>
+		<script src="clientscript.js"></script>
+	</body>
+</html>

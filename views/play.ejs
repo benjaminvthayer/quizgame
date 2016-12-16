@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<link href="styles.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<center>
+			<h1>Star  Wars Quiz Game!</h1>
+			<form action='/submit' method='get' >
+				<% for(var i=0; i< questions.length; i++ ) { %>
+					Question <%= i+1%>:
+					<%= questions[i]%>
+					<input class="useranswer" name="answer<%= i %>" type="text" />
+					<br>
+				<% } %>
+				<input id="sendAnswers" type="submit" value="Submit Answers"/>
+			</form>
+		</center>
+		<script src="clientscript.js"></script>
+	</body>
+</html>

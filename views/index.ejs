@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<title>Star  Wars Quiz Game!</title>
+		<link href="styles.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<center>
+			<h1>Star  Wars Quiz Game!</h1>
+			<p> Test your Star-Wars knowledge! </p>
+			<form action="/play" method="get">
+				Enter Name: <input type="text" name = "name" placeholder="Rumplestiltskin" /> <br><br>
+				<input type="submit" value="Play Game"/>
+			</form>
+			<form action='/highscores' method='get' >
+				<input id="sendAnswers" type="submit" value="View Highscores"/>
+			</form>
+		</center>
+		<script src="clientscript.js"></script>
+	</body>
+</html>
